@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
+#import "VENBackspaceTextField.h"
 
 @class VENTokenField;
 @protocol VENTokenFieldDelegate <NSObject>
@@ -44,6 +45,9 @@
 
 @property (weak, nonatomic) id<VENTokenFieldDelegate> delegate;
 @property (weak, nonatomic) id<VENTokenFieldDataSource> dataSource;
+
+@property (strong, nonatomic) VENBackspaceTextField *inputTextField;
+
 
 - (void)reloadData;
 - (void)collapse;
